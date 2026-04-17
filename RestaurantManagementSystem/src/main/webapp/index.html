@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresco Restaurant | Home</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* === RESET & GLOBAL STYLES === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Merriweather', serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* === GLASSMORPHISM NAVBAR === */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 10px 60px;
+            position: fixed;
+            top: 0; 
+            width: 100%; 
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(247, 148, 29, 0.3);
+        }
+
+        .logo img {
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-links li a:hover, .nav-links li a.active {
+            color: #f7941d;
+            border-bottom: 2px solid #f7941d;
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('menu.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .fresco-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(6rem, 15vw, 10rem); /* Responsive font size */
+            color: #f7941d;
+            margin-bottom: -20px;
+            text-shadow: 4px 4px 15px rgba(0,0,0,0.8);
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .hero-content p {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-style: italic;
+            margin-bottom: 40px;
+            color: #e0dcc9;
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+        }
+
+        /* === BUTTON STYLE === */
+        .btn-reservation {
+            padding: 18px 45px;
+            background: transparent;
+            color: #f7941d;
+            border: 2px solid #f7941d;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            display: inline-block;
+        }
+
+        .btn-reservation:hover {
+            background: #f7941d;
+            color: #fff;
+            box-shadow: 0 0 30px rgba(247, 148, 29, 0.5);
+            transform: translateY(-5px);
+        }
+
+        /* === FOOTER === */
+        .footer {
+            background-color: #050505;
+            color: #888;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .footer-bottom p {
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .navbar { padding: 10px 20px; }
+            .nav-links { display: none; } /* Tablet/Mobile par menu hide kar rahe hain */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+    	<div class="logo">
+        	<img src="download.png" alt="Fresco Logo">
+    	</div>
+    
+    	<ul class="nav-links">
+        	<li><a href="index.html" class="active">Home</a></li>
+        	<li><a href="menu.jsp?newOrder=true">Menu</a></li>
+        	<li><a href="login.jsp">Team</a></li> 
+        	<li><a href="About.jsp">About Us</a></li>
+        	<li><a href="reservation.jsp">Reservation</a></li>
+        	<li><a href="contect.jsp">Contact Us</a></li>
+    	</ul>
+	</nav>
+
+    <header class="hero"> 
+        <h1 class="fresco-title">Fresco</h1>
+        <div class="hero-content">
+            <p>Feels Like Home, Tastes Like a Paradise.</p>
+            <a href="reservation.jsp" class="btn-reservation">Reservation</a>
+        </div>
+    </header>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2025 FRESCO FINE DINING RESTAURANT. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

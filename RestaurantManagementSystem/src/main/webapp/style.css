@@ -1,0 +1,258 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+      
+    }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    backdrop-filter: blur(2px);
+}
+
+nav a:hover {
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px 5px rgba(255, 165, 0, 0.7);
+    border-radius: 40px;
+    padding: 8px 16px;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* === Nav Links === */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 50px;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f7941d;
+}
+.footer {
+  background-color: rgba(0, 0, 0, 0.781);
+  color: white;
+  padding: 30px 20px 10px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* === Hero Section === */
+.hero {
+    background: url('images/steak-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+.fresco-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 150px;
+    color: #f7941d;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 300px;
+    text-shadow: 2px 2px 5px rgba(197, 156, 42, 0.692);
+    z-index: 998;
+    position: absolute;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 150px;
+    box-shadow: 0 0 50px #f1c123de !important;
+
+
+}
+
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+      
+}
+
+/* === Button === */
+.btn {
+    background-color: #d2691e;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 50px #f1c123de;
+
+}
+
+.btn:hover {
+  background-color: #faac04e1;
+  color: #fff;
+  box-shadow: 0 0 50px #f1c123de;
+}
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0,0,0,0.85);
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+  }
+
+/* Menu section */
+
+.menu-section {
+  padding: 50px;
+  background-color: #111;
+  color: white;
+  text-align: center;
+}
+
+.menu-heading {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.menu-column {
+  flex: 1 1 300px;
+  padding: 20px;
+  background: #222;
+  border-radius: 10px;
+}
+
+.menu-item {
+  display: block;
+  margin: 15px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.submit-area {
+  margin-top: 30px;
+}
+
+.submit-area button {
+  background-color: #f7941d;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+
+
+}
+
+.order-summary {
+  padding: 40px;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+}
+
+.order-summary ul {
+  list-style: none;
+  padding: 0;
+}
+nter{
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn-qty:hover {
+      background-color: #a78bfa;
+      color: white;
+    }
+    .qty-input {
+      width: 3.5rem;
+      text-align: center;
+      border: 1px solid #ddd6fe;
+      border-radius: 0.25rem;
+      padding: 0.25rem;
+      margin: 0 0.25rem;
+      font-size: 1rem;
+      color: #5B21B6;
+      font-weight: 600;
+    }
